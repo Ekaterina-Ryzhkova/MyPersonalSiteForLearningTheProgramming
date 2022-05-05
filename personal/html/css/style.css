@@ -1,0 +1,368 @@
+html
+{
+    box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+*,*::before, *::after
+{
+    box-sizing: inherit;
+}
+
+.container
+{
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/Montserrat/static/Montserrat-Light.ttf);
+  }
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: "Montserrat-Medium";
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
+  }
+
+.main-text
+{
+    font-size: 65px;
+    letter-spacing: 5px;
+    color: #ff422e;
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
+}
+
+.botton-main-text
+{
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: #1a191e;
+    font-weight: 300;
+    font-family: "Montserrat-Light";
+    padding-bottom: 88px;
+    
+}
+
+.article
+{
+    border-top: 2px solid #ff422e;
+    padding-top: 56px;
+    padding-bottom: 28px;
+    border-bottom: 2px solid #ff422e;
+}
+
+.article p
+{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #ff422e;
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
+    padding-bottom: 28px;
+}
+
+.article p:hover
+{
+    margin-left: 10px;
+    transition: all 0.3s ease 0s ;
+}
+
+.nav-box
+{
+
+    padding: 20px;
+    width: 100%;
+    border-bottom: 2px solid #ff422e;
+    margin-bottom: 56px;
+}
+
+.openmodalwindow
+{
+    font-size: 16px;
+    color: #1a191e;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.nav-box ul
+{
+    list-style: none;
+}
+
+.nav-box ul li
+{
+    display: inline;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #1a191e;
+    font-family: "Montserrat-Medium";
+    margin-left: 10px;
+}
+
+.nav-box a
+{
+    color: #1a191e;
+}
+
+.nav-box a:hover
+{
+    color: #ff422e;
+    transition: all 0.3s ease 0s ;
+}
+
+.popup
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 46, 56, 0.9);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease 0s ;
+}
+
+.popup:target
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup_content
+{
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.popup_body
+{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_content
+{
+    background-color: #fff;
+    width: 700px;
+    min-height: 248px;
+    font-size: 18px;
+    padding: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translate(0px, -100%);
+    transition: all 0.3s ease 0s ;
+    
+}
+
+pre
+{
+  display: grid;
+  padding: 4px 16px;
+  background-color: #ddf2ea;
+  white-space: pre-wrap;
+}
+
+code
+{
+    display: block;
+    padding: 16px 0;
+    overflow-x: auto;
+}
+
+.popup_title
+{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #2b2e38;
+    margin: 20px 0px;
+}
+
+.popup_text
+{
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color: #2b2e38;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    
+}
+
+.close-button
+ {
+        background-color: #81c784;
+        min-width: 110px;
+        border: none;
+        color: white;
+        padding: 12px 0;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: 'Open Sans', sans-serif;
+    }
+
+summary {
+    border: 4px solid transparent;
+    outline: none;
+    padding: 1rem;
+    display: block;
+    background: #82828214;
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+    color: #1a191e;
+    
+    }
+  details {
+    max-width: 500px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    background: white;
+  }
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+  summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(119, 111, 111, 0.54);
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
+  
+  .content {
+    border-top: none;
+    padding: 10px;
+    background-color: rgba(251, 250, 250, 0.17);
+    border-top: none;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+  }
+  
+  details ul
+  {
+      margin-left: 50px;
+  }
+
+ .content li {
+  list-style-type: '👉';
+  padding-inline-start: 1ch;
+  }
+
+  .theme {
+    cursor: pointer;
+}
+
+.theme svg
+{
+    cursor: pointer;
+}
+
+.inner__header
+{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 108px;
+}
+
+.popup_text li {
+    padding-inline-start: 2ch;
+    }
+
+    .popup_text span {
+        font-weight: 600;
+        }
+
+        .popup_text ul
+        {
+            text-align: left;
+            margin-left: 30px;
+        }
+    .popup_text .popup_title
+    {
+        text-align: center;
+        font-size: 16px;
+    }
+
+.hidden
+{
+display: none;
+position: absolute;
+bottom: 130%;
+left: 0px;
+background: #FFFFAA;
+color: #000;
+border: 1px solid #FFAD33;
+border-radius: 5px;
+padding: 10px;
+
+}
+
+.hidden li {
+    list-style-type: '👉';
+}
+
+.hover:hover + .hidden{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    min-width: 500px;
+    padding-left: 20px;
+}
+
+.block{
+    display: inline-block;
+    position:relative;}
+
+.hover
+{
+    text-decoration: underline;
+}
